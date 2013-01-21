@@ -1,0 +1,13 @@
+rails new blog
+E:\RubyOnRails\blog\config\database.yml
+E:\RubyOnRails\blog\Gemfile
+bundle install mysql
+download http://dev.mysql.com/get/Downloads/Connector-C/mysql-connector-c-noinstall-6.0.2-win32.zip/from/pick. And put lib\libmysql.dll file in your Ruby bin directory
+
+rake db:create
+
+rails generate controller home index
+rm public/index.html
+edit config/routes.rb The root :to => "home#index" tells Rails to map the root action to the home controller’s index action.
+$ rails generate scaffold Post name:string title:string content:text automatically create db/migrate/20100207214725_create_posts.rb file
+$ rake db:migrate create the table
